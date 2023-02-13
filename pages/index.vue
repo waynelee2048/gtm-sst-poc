@@ -4,6 +4,7 @@
   <br />
   <br />
   <button @click="sendConversionEvent">send conversion</button> -->
+  <button class="button">test</button>
 </template>
 
 <script>
