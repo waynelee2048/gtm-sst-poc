@@ -10,7 +10,6 @@ const initGtag = () => {
   window.gtag = function () {
     window.dataLayer.push(arguments);
   };
-  window.dataLayer.push({ event: "optimize.activate" });
   window.gtag("js", new Date());
   window.gtag("config", ga_id, {
     transport_url: "https://gtm-pfgg4zx-ndezy.uc.r.appspot.com",
