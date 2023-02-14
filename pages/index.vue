@@ -1,21 +1,6 @@
 <template>
-  <h1>GTM Server Side Tagging POC</h1>
-  <!-- <button @click="sendEvent">send click event</button>
+  <nuxt-link to="gtag">go to gtag</nuxt-link>
   <br />
   <br />
-  <button @click="sendConversionEvent">send conversion</button> -->
-  <button class="button">test</button>
+  <nuxt-link to="gtm">go to gtm</nuxt-link>
 </template>
-
-<script>
-export default {
-  methods: {
-    sendEvent() {
-      window.gtag("event", "wayne_click");
-    },
-    sendConversionEvent() {
-      window.gtag("event", "conversion");
-    },
-  },
-};
-</script>
