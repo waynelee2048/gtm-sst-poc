@@ -3,10 +3,11 @@
   <button @click="sendEvent">send click event</button>
   <br />
   <br />
+  <button @click="sendConversionEvent">send conversion event</button>
+  <br />
+  <br />
   <input v-model="eventName" />
-  <button @click="sendConversionEvent">
-    send custom event: {{ eventName }}
-  </button>
+  <button @click="sendCustomEvent">send custom event: {{ eventName }}</button>
 </template>
 
 <script>
@@ -14,7 +15,7 @@ import { initGtag } from "../utils/track";
 export default {
   data() {
     return {
-      eventName: "conversion",
+      eventName: "",
     };
   },
   mounted() {
@@ -24,8 +25,14 @@ export default {
     sendEvent() {
       window.gtag("event", "wayne_click");
     },
-    sendConversionEvent() {
+    sendCustomEvent() {
+      if (!this.eventName) return;
       window.gtag("event", this.eventName);
+    },
+    sendConversionEvent() {
+      window.gtag("event", "conversion", {
+        send_to: "AW-11091176761/2DnVCM3t_IsYELna16gp",
+      });
     },
   },
 };

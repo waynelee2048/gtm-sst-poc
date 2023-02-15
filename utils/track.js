@@ -11,15 +11,11 @@ export const initGtag = () => {
     window.dataLayer.push(arguments);
   };
   window.gtag("js", new Date());
+
   window.gtag("config", ga4_id, {
     transport_url: "https://gtm-pfgg4zx-ndezy.uc.r.appspot.com",
     first_party_collection: true,
   });
-  // const ga_id = "UA-97393974-3";
-  // window.gtag("config", ga_id, {
-  //   transport_url: "https://gtm-pfgg4zx-ndezy.uc.r.appspot.com",
-  //   first_party_collection: true,
-  // });
 };
 
 export const initGTM = () => {
