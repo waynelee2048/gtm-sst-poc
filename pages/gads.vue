@@ -41,7 +41,7 @@ export default {
       // 直接發到 google ads
       if (!this.label) return;
       window.gtag("event", "conversion", {
-        send_to: `${tagId}/${this.label}`,
+        send_to: `${this.tagId}/${this.label}`,
         // custom payload
       });
     },
