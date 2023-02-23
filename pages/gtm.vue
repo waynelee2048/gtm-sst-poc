@@ -1,6 +1,7 @@
 <template>
   <h1>GTM</h1>
-  <button class="button">testing button</button>
+  <button data-ga-type="event" class="button">testing button</button>
+  <div data-ga-type="event">ga type event</div>
 </template>
 
 <script>
